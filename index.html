@@ -349,7 +349,7 @@
             var image = document.getElementById('face-image');
             const prediction = await model2.predict(image, false);
             prediction.sort((a,b) => parseFloat(b.probability) - parseFloat(a.probability));
-            document.getElementById('resultMessage').innerHTML = 'あなたは'+resultMessage;
+            document.getElementById('resultMessage').innerHTML = 'あなたは'+prediction[0].className+"顔";
             for (let i = 0; i < 3; i++) {
                 console.log(prediction)
                 let resultNum = Math.floor(prediction[i].probability*100);
