@@ -22,7 +22,7 @@
         <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">僕の顔は</a>
+            <a class="navbar-brand" href="#">내 얼굴형은?</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,17 +40,10 @@
                 </ul>
             </div>
         </nav>
-        <div style=" width: 320px; height: 50px; margin: auto;">
-            <ins class="kakao_ad_area" style="display:none;"
-            data-ad-unit    = "DAN-1jeqkm4xa48rl"
-            data-ad-width   = "320"
-            data-ad-height  = "50"></ins>
-        </div>
-        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
         <div class="container">
             <br>
             <div class="text-center">
-                <h2 id="site-title">調味料に例える顔診断</h2>
+                <h2 id="site-title">조미료 얼굴형을 찾아보자!</h2>
                 <br>
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                     <label class="btn btn-outline-primary active">
@@ -63,24 +56,19 @@
             </div>
             <br>
             <div class="text-center">
-                <h6>上のボタンで性別を選択してください。</h6>
+                <h6>위의 버튼으로 성별을 선택해 주세요.</h6>
                 <hr>
-                <h6>下のボタンをクリックして、なるべく正面の写った写真を選んでください。</h6>
+                <h6>아래의 버튼을 클릭 후 가능한 정면이 나온 사진을 선택, 촬영해 주세요.</h6>
                 <hr>
-                <h6> 掲載した写真はサーバーに保存されませんので、ご安心してご利用ください。</h6>
+                <h6> 게제하신 사진은 절대 서버에 저장되지 않습니다.</h6>
             </div>
             <div class="file-upload">
                 <button type="button" class="btn btn-outline-primary btn-lg btn-block" onclick="$('.file-upload-input').trigger( 'click' )">click!</button>
-                <ins class="kakao_ad_area" style="display:none;"
-                 data-ad-unit    = "DAN-ubuoyrefoqwg"
-                 data-ad-width   = "320"
-                 data-ad-height  = "100"></ins>
-                <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
                 <div class="image-upload-wrap">
                     <input class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*"/>
                     <div class="drag-img" id="area">
                         <img src="https://img.icons8.com/ios/50/000000/face.png"/>
-                        <h3>写真をドラッグしてここに入れてください。</h3>
+                        <h3>사진을 드래그 해 넣어주세요.</h3>
                     </div>
                 </div>
                 <div class="file-upload-content">
@@ -90,7 +78,7 @@
                         <div class="text-center">
                             <div class="card" style="width: 18rem; display:inline-block;">
                                 <div class="card-header" style="background: #6324BD; color: white;">
-                                    ランキング
+                                    랭킹
                                 </div>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">
@@ -150,11 +138,6 @@
                 </div>
             </div>
             <div id="disqus_thread"></div>
-            <ins class="kakao_ad_area" style="display:none;"
-             data-ad-unit    = "DAN-skq2815clvle"
-             data-ad-width   = "320"
-             data-ad-height  = "100"></ins>
-            <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
             <script>
 
             /**
@@ -213,31 +196,31 @@
             var resultMessage;
             switch (prediction[0].className) {
                 case 'sio':
-                    resultMessage = "塩顔"
+                    resultMessage = "소금형 얼굴"
                     break;
                 case 'sosu':
-                    resultMessage = "ソース顔"
+                    resultMessage = "소스형 얼굴"
                     break;
                 case 'sato':
-                    resultMessage = "砂糖顔"
+                    resultMessage = "설탕형 얼굴"
                     break;
                 case 'sake':
-                    resultMessage = "酢顔"
+                    resultMessage = "식초형 얼굴"
                     break;
                 case 'mayo':
-                    resultMessage = "マヨネーズ顔"
+                    resultMessage = "마요네즈형 얼굴"
                     break;
                 case 'kecyapu':
-                    resultMessage = "ケチャプ顔"
+                    resultMessage = "케챱형 얼굴"
                     break;
                 case 'syoyu':
-                    resultMessage = "醤油顔"
+                    resultMessage = "간장형 얼굴"
                     break;
                 default:
-                    resultMessage = "顔がよく写るように、撮り直してください。"
+                    resultMessage = "얼굴이 인식되지 않습니다."
                 break;
             }
-            document.getElementById('resultMessage').innerHTML = 'あなたは'+resultMessage;
+            document.getElementById('resultMessage').innerHTML = '당신은 '+resultMessage;
             for (let i = 0; i < 3; i++) {
                 console.log(prediction)
                 let resultNum = Math.floor(prediction[i].probability*100);
@@ -263,19 +246,19 @@
         function changeTitle(title) {
 
             if (title == "kecyapu") {
-                return "ケチャップ";
+                return "케챱";
             }else if (title == "sosu") {
-                return "ソース";
+                return "소스";
             }else if (title == "sio") {
-                return "塩";
+                return "소금";
             }else if (title == "syoyu") {
-                return "醬油";
+                return "간장";
             }else if (title == "sato") {
-                return "砂糖";
+                return "설탕";
             }else if (title == "sake") {
-                return "酢"
+                return "식초"
             }else if (title == "mayo") {
-                return "マヨネーズ"
+                return "마요네즈"
             }
         }
         //input radio change sex start
@@ -283,10 +266,10 @@
             let title = document.getElementById('site-title');
             if(obj.value==2){
                 title.innerHTML = "";
-                title.innerHTML = "動物に例える顔診断";
+                title.innerHTML = "동물 얼굴형을 찾아보자!";
             }else if(obj.value==1){
                 title.innerHTML = "";
-                title.innerHTML = "調味料に例える顔診断";
+                title.innerHTML = "조미료 얼굴형을 찾아보자!";
             }
         }
         //change sex end
